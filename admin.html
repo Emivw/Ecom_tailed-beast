@@ -18,8 +18,60 @@
 </head>
 
 <body>
+    <section id="search">
+        <div class="container rounded rounded-5 border border-2 p-3 my-3 text-white">
+            <h2 class="text-center">Filter</h2>
+
+            <div class="row">
+                <div class="mx-auto col-lg-2 col-md-6 ">
+                    <label for="property">Looking For:</label>
+                    <select class="form-select" name="property" id="property">
+                    <option value="all">Affiliation</option>
+                    <option value="Takigakure">Takigakure</option>
+                    <option value="Kumogakure">Kumogakure</option>
+                    <option value="Kirigakure">Kirigakure</option>
+                    <option value="Kirigakure">Iwagakure</option>
+                </select>
+                </div>
+                <div class="mx-auto col-lg-2 col-md-6 ">
+                    <label for="location">Species: </label>
+                    <select class="form-select" name="location" id="location">
+                    <option value="all">All Species</option>
+                    <option value="Kabutomushi">Kabutomushi</option>
+                    <option value="Slug">Slug</option>
+                    <option value="Kitsune">Kitsune</option>
+                    <option value="Bakeneko">Bakeneko</option>
+                    <option value="Ushi-oni">Ushi-oni</option>
+                </select>
+                </div>
+                <div class="mx-auto col-lg-2 col-md-6 ">
+                    <label for="size">Classification: </label>
+                    <select class="form-select" name="size" id="size">
+                    <option value="all">Title</option>
+                    <option value="Tailed Beast">Tailed Beasts</option>
+                    <option value="Tailed Jinjuriki">Tailed Jinjuriki</option>
+                </select>
+                </div>
+                <div class="mx-auto col-lg-2 col-md-6 ">
+                    <label for="budget">Your Budget: </label>
+                    <select class="form-select" name="budget" id="budget">
+                    <option value="all">Max. Price</option>
+                    <option value="5000">R5000</option>
+                    <option value="6000">R6000</option>
+                    <option value="7000">R7000</option>
+                    <option value="8000">R8000</option>
+                    <option value="9000">R9000</option>
+                    <option value="10000">R10000</option>
+                </select>
+                </div>
+                <!-- <div class="mx-auto col-lg-2 col-md-6 "> -->
+                <!-- <label for=""></label> -->
+                <!-- <button id="btnSearch" class="mx-auto col-lg-2 col-md-6 btn btn-primary h-50 mt-4">Search</button> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </section>
     <div class="container" id="admin-container">
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
         <table class="table text-white">
             <thead>
                 <tr>
@@ -29,38 +81,10 @@
                     <th scope="col">Species</th>
                     <th scope="col">Affiliation</th>
                     <th scope="col">Image</th>
-                    <th scope="col"><button type="button " class="btn btn-primary " data-bs-toggle="modal " data-bs-target="#exampleModal " data-bs-whatever="@mdo ">Add new item</button>
-                    </th>
                 </tr>
             </thead>
             <tbody class=""></tbody>
         </table>
-    </div>
-    <div class="modal fade " id="exampleModal " tabindex="-1 " aria-labelledby="exampleModalLabel " aria-hidden="true ">
-        <div class="modal-dialog ">
-            <div class="modal-content ">
-                <div class="modal-header ">
-                    <h5 class="modal-title " id="exampleModalLabel ">New message</h5>
-                    <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
-                </div>
-                <div class="modal-body ">
-                    <form>
-                        <div class="mb-3 ">
-                            <label for="recipient-name " class="col-form-label ">Recipient:</label>
-                            <input type="text " class="form-control " id="recipient-name ">
-                        </div>
-                        <div class="mb-3 ">
-                            <label for="message-text " class="col-form-label ">Message:</label>
-                            <textarea class="form-control " id="message-text "></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer ">
-                    <button type="button " class="btn btn-secondary " data-bs-dismiss="modal ">Close</button>
-                    <button type="button " class="btn btn-primary ">Send message</button>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- bootstrap scripts-->;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>

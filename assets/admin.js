@@ -66,7 +66,7 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
         {
             id: 9,
             title: "10 tails",
-            classification: "Tailed Beast",
+            classification: "Tailed Jinjuriki",
             species: "Kitsune",
             affiliation: "Allied Shinobi Forces",
             img: "./media/ape.jpg",
@@ -93,20 +93,33 @@ document.addEventListener("DOMContentLoaded", () => {
 //     tr = table.getElementsByTagName("tr");
 
 // Loop through all table rows, and hide those who don't match the search query
-
+// CREATE
+function addItem() {
+    // e.preventDefault();
+    // Push to Array
+    lists.push({
+        id: lists.length + 1,
+        title: document.getElementById('addTitle').value,
+        classification: document.getElementById('addClass').value,
+        species: document.getElementById('addSpecies').value,
+        affiliation: document.getElementById('addaffiliation').value,
+        img: parseInt(document.getElementById('addImg').value),
+    });
+    localStorage.setItem("items", JSON.stringify(lists));
+    createTable();
+}
 
 
 function createTable() {
     let containerAdmin = document.querySelector("tbody");
     containerAdmin.innerHTML = "";
-    lists.forEach((e) => {
+    lists.forEach((e, index) => {
         containerAdmin.innerHTML += `
                 <tr>
                     <th scope="row">${e.id}</th>
                     <td><input type="text" value="${e.title}" disabled></td>
                     <td><input type="text" value="${e.classification}" disabled></td>
                     <td><input type="text" value="${e.species}" disabled></td>
-                    <td><input type="text" value="${e.title}" disabled></td>
                     <td><input type="text" value="${e.affiliation}" disabled></td>
                     <td>${e.img}</td>
                     <td>
@@ -115,7 +128,75 @@ function createTable() {
                             <i class="fas fa-edit" onclick="editItem(${e.id})"> </i>
                         </div>
                     </td>
-                </tr>`;
+    </tr>
+    <!-- Modal -->
+    <div class="modal modal-xl fade" id="update${index}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">${e.title}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        <div class="modal-body">
+        <div class="row">
+        <div class="col-6">
+            <!-- title -->
+                <div class="mb-3">
+                    <label for="editTitle${index}" class="form-label">Address</label>
+                    <input class="form-control" type="text"
+                    name="editTitle${index}"
+                    id="editTitle${index}"
+                    value="${e.title}"/>
+                </div>
+    
+            <!-- classification -->
+                <div class="mb-3">
+                    <label for="editType${index}" class="form-label">Type</label>
+                    <input class="form-control" type="text"
+                    name="editType${index}"
+                    id="editType${index}"
+                    value="${e.classification}"/>
+                </div>
+    
+            <!-- species -->
+                <div class="mb-3">
+                    <label for="editLocation${index}" class="form-label">Location</label>
+                    <input class="form-control" type="text"
+                    name="editLocation${index}"
+                    id="editLocation${index}"
+                    value="${e.species}"/>
+                </div>
+    
+            <!-- picture -->
+                <div class="mb-3">
+                    <label for="editPic${index}" class="form-label">Picture</label>
+                    <input class="form-control" type="text"
+                    name="editPic${index}"
+                    id="editPic${index}"
+                    value="${e.affiliation}"/>
+                </div>
+            </div>
+            
+            <div class="col-6">
+            <!-- picture -->
+                <div class="mb-3">
+                    <label for="editRooms${index}" class="form-label">Lenght</label>
+                    <input class="form-control" type="text"
+                    name="editRooms${index}"
+                    id="editRooms${index}"
+                    value="${e.img}"/>
+                </div>
+            </div>
+         </div> 
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" onclick="updateProperty(${index})" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>`;
     });
 }
 
@@ -133,50 +214,50 @@ function removeItem(id) {
 // Sorts by property type
 function sortType(type) {
     if (type.target.value === 'all') {
-        return loadData(arr)
+        return createTable()
     }
 
-    let typeArr = arr.filter((x) => {
+    let typeArr = lists.filter((x) => {
         return x.type == type.target.value;
     });
-    loadData(typeArr);
+    createTable(typeArr);
 }
 document.getElementById("property").addEventListener("change", sortType);
 
 // sorts by Location
 function sortLocation(location) {
     if (location.target.value === 'all') {
-        return loadData(arr)
+        return createTable(lists)
     }
-    let locArr = arr.filter((x) => {
+    let locArr = lists.filter((x) => {
         return x.location == location.target.value;
     });
-    loadData(locArr);
+    createTable(locArr);
 }
 document.getElementById("location").addEventListener("change", sortLocation);
 
 // sorts by bedrooms
 function sortBedroom(size) {
     if (size.target.value === 'all') {
-        return loadData(arr)
+        return createTable(arr)
     }
 
-    let bedArr = arr.filter((x) => {
+    let bedArr = lists.filter((x) => {
         return x.bedrooms <= size.target.value;
     });
     console.table(bedArr)
-    loadData(bedArr);
+    createTable(bedArr);
 }
 document.getElementById("size").addEventListener("change", sortBedroom);
 
 // sorts by budget
 function sortBudget(price) {
     if (price.target.value === 'all') {
-        return loadData(arr)
+        return createTable(arr)
     }
 
-    let sortPrice = arr.filter((p) => {
+    let sortPrice = lists.filter((p) => {
         return p.price <= price.target.value;
     });
-    loadData(sortPrice);
+    createTable(sortPrice);
 }
