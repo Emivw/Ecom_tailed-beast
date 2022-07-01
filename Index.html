@@ -14,211 +14,168 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <!-- my css -->
     <link rel="stylesheet" href="./assets/main.css">
-    <title>Document</title>
+    <title>Ecom</title>
 </head>
 
 <body>
     <header>
         <section id="header-content-section">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown link
+        </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
         </section>
         <section id="landing-content-section">
-            <div class="container">
-                <ul class="nav nav-tabs d-flex justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-            </div>
         </section>
     </header>
-    <main>
-        <section id="properties-carousal-section">
-            <div class="home-demo container">
+    <main class="text-white">
+        <section id="search">
+            <div class="container rounded rounded-5 border border-2 p-3 my-3 text-white">
+                <h2 class="text-center">Filter</h2>
+
+                <div class="row">
+                    <div class="mx-auto col-lg-2 col-md-6 ">
+                        <label for="property">Looking For:</label>
+                        <select class="form-select" name="property" id="property">
+                        <option value="all">Affiliation</option>
+                        <option value="Takigakure">Takigakure</option>
+                        <option value="Kumogakure">Kumogakure</option>
+                        <option value="Kirigakure">Kirigakure</option>
+                        <option value="Kirigakure">Iwagakure</option>
+                    </select>
+                    </div>
+                    <div class="mx-auto col-lg-2 col-md-6 ">
+                        <label for="location">Species: </label>
+                        <select class="form-select" name="location" id="location">
+                        <option value="all">All Species</option>
+                        <option value="Kabutomushi">Kabutomushi</option>
+                        <option value="Slug">Slug</option>
+                        <option value="Kitsune">Kitsune</option>
+                        <option value="Bakeneko">Bakeneko</option>
+                        <option value="Ushi-oni">Ushi-oni</option>
+                    </select>
+                    </div>
+                    <div class="mx-auto col-lg-2 col-md-6 ">
+                        <label for="size">Property size: </label>
+                        <select class="form-select" name="size" id="size">
+                        <option value="all">Bedrooms</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    </div>
+                    <div class="mx-auto col-lg-2 col-md-6 ">
+                        <label for="budget">Your Budget: </label>
+                        <select class="form-select" name="budget" id="budget">
+                        <option value="all">Max. Price</option>
+                        <option value="5000">R5000</option>
+                        <option value="6000">R6000</option>
+                        <option value="7000">R7000</option>
+                        <option value="8000">R8000</option>
+                        <option value="9000">R9000</option>
+                        <option value="10000">R10000</option>
+                    </select>
+                    </div>
+                    <!-- <div class="mx-auto col-lg-2 col-md-6 "> -->
+                    <!-- <label for=""></label> -->
+                    <!-- <button id="btnSearch" class="mx-auto col-lg-2 col-md-6 btn btn-primary h-50 mt-4">Search</button> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </section>
+        <section id=" properties-carousal-section ">
+            <div class="home-demo container ">
                 <h3>Carousel</h3>
-                <div class="owl-carousel owl-theme  my-5 gap-3">
-                    <div class="item">
+                <div class="owl-carousel owl-theme my-5 gap-3 ">
+                    <div class="item ">
                         <h2>Powerful</h2>
                     </div>
-                    <div class="item">
-                        <img src="./assets/media/PreviewEyes1.jpg" alt="">
+                    <div class="item ">
+                        <img src="./assets/media/PreviewEyes1.jpg " alt=" ">
                     </div>
-                    <div class="item">
+                    <div class="item ">
                         <h2>Upgradable</h2>
                     </div>
-                    <div class="item">
-                        <img src="./assets/media/PreviewEyes2.jpg" alt="">
+                    <div class="item ">
+                        <img src="./assets/media/PreviewEyes2.jpg " alt=" ">
                     </div>
-                    <div class="item">
+                    <div class="item ">
                         <h2>Tons of options</h2>
                     </div>
-                    <div class="item">
-                        <img src="./assets/media/PreviewEyes3jpg.jpg" alt="">
+                    <div class="item ">
+                        <img src="./assets/media/PreviewEyes3jpg.jpg " alt=" ">
                     </div>
-                    <div class="item">
+                    <div class="item ">
                         <h2>scalable</h2>
                     </div>
-                    <div class="item">
-                        <img src="./assets/media/PreviewEyes4.jpg" alt="">
+                    <div class="item ">
+                        <img src="./assets/media/PreviewEyes4.jpg " alt=" ">
                     </div>
-                    <div class="item">
+                    <div class="item ">
                         <h2>Top of range</h2>
                     </div>
-                    <div class="item">
-                        <img src="./assets/media/PreviewEyes5.jpg" alt="">
+                    <div class="item ">
+                        <img src="./assets/media/PreviewEyes5.jpg " alt=" ">
                     </div>
-                    <div class="item">
+                    <div class="item ">
                         <h2>Auto leveling</h2>
                     </div>
-                    <div class="item">
-                        <img src="./assets/media/PreviewEyes6.jpg" alt="">
+                    <div class="item ">
+                        <img src="./assets/media/PreviewEyes6.jpg " alt=" ">
                     </div>
 
                 </div>
             </div>
         </section>
-        <section id="properties-section">
+        <section id="properties-section ">
             <!-- DEMO 3 -->
-            <div class="container">
-                <h3 class="font-weight-bold mb-0">Demo 3</h3>
-                <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <div class="row d-flex">
+            <div class="container ">
+                <h3 class="font-weight-bold mb-0 ">Demo 3</h3>
+                <p class="font-italic text-muted mb-4 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <div class="row itemsdiv d-flex ">
                     <!-- DEMO 3 Item-->
-                    <div class="col-lg-6 mb-3 mb-lg-0">
+                    <div class="col-lg-6 mb-3 mb-lg-0 ">
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer-section">
-        <div class="container">
-            <div class="footer-cta pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="cta-text">
-                                <h4>Find us</h4>
-                                <span>1010 Avenue, sw 54321, chandigarh</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="fas fa-phone"></i>
-                            <div class="cta-text">
-                                <h4>Call us</h4>
-                                <span>9876543210 0</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4 mb-30">
-                        <div class="single-cta">
-                            <i class="far fa-envelope-open"></i>
-                            <div class="cta-text">
-                                <h4>Mail us</h4>
-                                <span>mail@info.com</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-content pt-5 pb-5">
-                <div class="row">
-                    <div class="col-xl-4 col-lg-4 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a>
-                            </div>
-                            <div class="footer-text">
-                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing elit,Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            <div class="footer-social-icon">
-                                <span>Follow us</span>
-                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Useful Links</h3>
-                            </div>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">about</a></li>
-                                <li><a href="#">services</a></li>
-                                <li><a href="#">portfolio</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Our Services</a></li>
-                                <li><a href="#">Expert Team</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Latest News</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-                        <div class="footer-widget">
-                            <div class="footer-widget-heading">
-                                <h3>Subscribe</h3>
-                            </div>
-                            <div class="footer-text mb-25">
-                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
-                            </div>
-                            <div class="subscribe-form">
-                                <form action="#">
-                                    <input type="text" placeholder="Email Address">
-                                    <button><i class="fab fa-telegram-plane"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
-                        <div class="copyright-text">
-                            <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
-                        </div>
-                    </div>
-                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-                        <div class="footer-menu">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Terms</a></li>
-                                <li><a href="#">Privacy</a></li>
-                                <li><a href="#">Policy</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
     <!-- bootstrap scripts-->;
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
     <!-- OwlCarousel scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
     <!-- my scripts -->
-    <script src="./assets/main.js"></script>
+    <script src="./assets/main.js "></script>
 </body>
 
 </html>
