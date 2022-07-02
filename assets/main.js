@@ -25,6 +25,7 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
             species: "Kitsune",
             affiliation: "Allied Shinobi Forces",
             img: "./media/9tails.jpg",
+            price: 9000,
         },
         {
             id: 2,
@@ -33,6 +34,7 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
             species: "Ushi-oni",
             affiliation: "Allied Shinobi Forces",
             img: "./media/8tails.jpg",
+            price: 8000,
         },
         {
             id: 3,
@@ -41,6 +43,7 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
             species: "Kabutomushi",
             affiliation: "Takigakure",
             img: "./media/seventails.jpg",
+            price: 7000,
         },
         {
             id: 4,
@@ -49,6 +52,7 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
             species: "Slug",
             affiliation: "Kirigakure",
             img: "./media/slug.jpg",
+            price: 6000,
         },
         {
             id: 5,
@@ -57,6 +61,7 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
             species: "Kitsune",
             affiliation: "Iwagakure",
             img: "./media/",
+            price: 7000,
         },
         {
             id: 6,
@@ -65,6 +70,7 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
             species: "Kitsune",
             affiliation: "Iwagakure",
             img: "./media/ape.jpg",
+            price: 5000,
         },
         {
             id: 7,
@@ -73,6 +79,7 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
             species: "Kitsune",
             affiliation: "Kirigakure",
             img: "./media/ape.jpg",
+            price: 6000,
         },
         {
             id: 8,
@@ -81,6 +88,7 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
             species: "Bakeneko",
             affiliation: "Kumogakure",
             img: "./media/ape.jpg",
+            price: 6000,
         },
         {
             id: 9,
@@ -89,14 +97,16 @@ let lists = JSON.parse(localStorage.getItem("items")) ?
             species: "Kitsune",
             affiliation: "Allied Shinobi Forces",
             img: "./media/ape.jpg",
+            price: 10000,
         },
         {
             id: 10,
-            title: "Design Apartment",
+            title: "Desolate",
             classification: "Tailed Beast",
             species: "Kitsune",
             affiliation: "Allied Shinobi Forces",
             img: "./media/ape.jpg",
+            price: 10000,
         },
     ];
 //
@@ -115,7 +125,10 @@ function readItems() {
                         <div class="hover-overlay"></div>
                         <div class="hover-3-content px-5 py-4">
                             <h3 class="hover-3-title text-uppercase font-weight-bold mb-1"><span class="font-weight-light">${item.title}</span></h3>
-                            <p class="hover-3-description small text-uppercase mb-0">Lorem ipsum dolor sit amet, consectetur <br>adipisicing elit.</p>
+                            <p class="hover-3-description small text-uppercase mb-0">
+                            Species: ${item.species}
+                            Price:R${item.price}
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -3,11 +3,6 @@
         margin: 0;
         padding: 0;
     }
-    
-    header {
-        height: 100vh;
-        width: 100vw;
-    }
     /* https: //wallpapercave.com/wp/wp2179407.jpg */
     /* https: //i.pinimg.com/originals/18/ae/ce/18aece9f04c1264235f9a3e6aaf00f7a.jpg */
     
@@ -38,6 +33,12 @@
         font-family: "Poppins", sans-serif;
         background: #151414;
         overflow-x: hidden;
+    }
+    
+    footer {
+        height: 50vh;
+        margin-top: 55rem;
+        width: 100vw;
     }
     
     main {
